@@ -1,0 +1,25 @@
+# /**:  # 使用通配符以适配任何节点名
+#   ros__parameters:
+#     camera_name: narrow_stereo
+#     camera_index: 0
+#     exposure_time: 15000.0
+#     gain: 32.0
+#     camera_frame: "camera_optical_frame"
+#     camera_info_url: "package://hik_camera/config/camera_info.yaml"
+
+
+
+/**:  # 使用通配符以适配任何节点名
+  ros__parameters:
+    camera_name: narrow_stereo
+    camera_index: 0
+    # exposure_time: 20000.0
+    image_format: "RGB"  # 设置输出图像格式为 BGR
+    # auto_exposure: true   # 启用自动曝光
+    exposure_time: 30000.0    # 曝光时间为 0 通常表示自动曝光
+    # auto_gain: true
+    # auto_gain_min: 10.0  # 最小增益
+    # auto_gain_max: 40.0  # 最大增益
+    gain: 20.0
+    camera_frame: "camera_optical_frame"
+    camera_info_url: "package://hik_camera/config/camera_info.yaml"
