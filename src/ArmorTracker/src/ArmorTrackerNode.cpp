@@ -54,7 +54,7 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
     // 订阅原始图像 " video_frames " 主题  
     m_frame_sub = this->create_subscription<sensor_msgs::msg::Image>(
         "video_frames", 
-        rclcpp::SensorDataQoS(), 
+        10, 
         std::bind(&ArmorTrackerNode::subFrameCallback, this, std::placeholders::_1)
     );
 
@@ -150,21 +150,21 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armor::Sha
     ekf_->predict();
     ekf_->update(measurement);
 
-    // // 获取预测状态
-    // Eigen::Matrix<double, 1, 4> predicted_state = ekf_->getState();
+    // 获取预测状态
+    Eigen::Matrix<double, 1, 4> predicted_state = ekf_->getState();
 
-    // // // 构造预测结果消息
-    // // geometry_msgs::msg::PointStamped predicted_msg;
-    // // predicted_msg.header.stamp = this->get_clock()->now();
-    // // predicted_msg.header.frame_id = "map";
-    // // predicted_msg.point.x = predicted_state(0, 0); // x
-    // // predicted_msg.point.y = predicted_state(0, 1); // y
-    // // predicted_msg.point.z = 0.0;
+    // // 构造预测结果消息
+    // geometry_msgs::msg::PointStamped predicted_msg;
+    // predicted_msg.header.stamp = this->get_clock()->now();
+    // predicted_msg.header.frame_id = "map";
+    // predicted_msg.point.x = predicted_state(0, 0); // x
+    // predicted_msg.point.y = predicted_state(0, 1); // y
+    // predicted_msg.point.z = 0.0;
 
-    // // // 发布预测结果
-    // // predicted_armor_publisher_->publish(predicted_msg); 
+    // // 发布预测结果
+    // predicted_armor_publisher_->publish(predicted_msg); 
 
-    // std::cout << "predicted_state.x: " << predicted_state.x() << std::endl;
+    std::cout << "predicted_state.x: " << predicted_state.x() << std::endl;
 }
 
 

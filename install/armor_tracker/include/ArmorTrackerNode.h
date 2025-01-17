@@ -1,0 +1,44 @@
+#ifndef ARMOR_TRACKER_NODE_H
+#define ARMOR_TRACKER_NODE_H
+
+// #include <Eigen/src/Core/Matrix.h>
+// #include <Eigen/Core>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
+#include <rclcpp/subscription.hpp>
+#include <memory.h>
+
+#include <rclcpp/rclcpp.hpp>
+#include <image_transport/publisher.hpp>
+#include <image_transport/subscriber_filter.hpp>
+#include <image_transport/image_transport.hpp>
+#include <std_msgs/msg/float32.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <opencv2/opencv.hpp>
+#include "Ekf.hpp"
+
+#include "armor_interfaces/msg/armor.hpp"
+
+template class Ekf<4, 2>;  // 显式实例化模板
+
+class ArmorTrackerNode : public rclcpp::Node{
+public:
+    ArmorTrackerNode(const rclcpp::NodeOptions &options);
+    void subArmorsCallback(const armor_interfaces::msg::Armor::SharedPtr armors_msg);
+
+    void subFrameCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
+    
+private:
+    void initEkf();
+
+    rclcpp::Subscription<armor_interfaces::msg::Armor>::SharedPtr m_armors_sub;
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr m_frame_sub; 
+
+    std::shared_ptr<Ekf<4, 2>> ekf_; // 卡尔曼滤波器对象
+
+    // Eigen::Matrix<double, 1, 4> state_;  // 记录状态向量
+    // rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr predicted_armor_publisher_;
+
+};
+
+#endif //

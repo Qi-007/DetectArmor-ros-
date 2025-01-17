@@ -18,8 +18,8 @@ ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) :
     // 创建订阅者
     image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
         "video_frames", 
-        rclcpp::SensorDataQoS().keep_last(10), 
-        std::bind(&ArmorDetectNode::FrameCallback, this, std::placeholders::_1));
+        10,
+        std::bind(&ArmorDetectNode::process_frame, this, std::placeholders::_1));
 
 }
 
@@ -63,61 +63,62 @@ ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) :
         try {
             cv::Mat cv_image = cv_bridge::toCvShare(img_msg, "bgr8")->image;
 
-            cv::imshow("前哨站", cv_image);
-            cv::waitKey(30);
-            // // 处理图像进行目标检测
-            // ArmorDetect detector;
-            // detector.imageDetect(cv_image);
+            // cv::imshow("前哨站", cv_image);
+            // cv::waitKey(1);
 
-            // // 获取 Armor 信息
-            // const float& distence = ArmorInformation::getInstance().getDistance();
-            // const std::vector<cv::Point2f>& armor_points = ArmorInformation::getInstance().getApexs();
-            // const cv::Mat& tvec = ArmorInformation::getInstance().getTvec();
-            // const cv::Mat& rvec = ArmorInformation::getInstance().getRvec();
+            // 处理图像进行目标检测
+            ArmorDetect detector;
+            detector.imageDetect(cv_image);
 
-            // // 将 rvec 转换为旋转矩阵
-            // cv::Mat rotation_matrix;
-            // if (rvec.empty()) {
-            //     std::cerr << "rvec is empty, skipping this iteration." << std::endl;
-            //     return;
-            // }
-            // cv::Rodrigues(rvec, rotation_matrix);
+            // 获取 Armor 信息
+            const float& distence = ArmorInformation::getInstance().getDistance();
+            const std::vector<cv::Point2f>& armor_points = ArmorInformation::getInstance().getApexs();
+            const cv::Mat& tvec = ArmorInformation::getInstance().getTvec();
+            const cv::Mat& rvec = ArmorInformation::getInstance().getRvec();
 
-            // // 将旋转矩阵转换为四元数
-            // tf2::Matrix3x3 tf2_rotation_matrix(
-            //     rotation_matrix.at<double>(0, 0), rotation_matrix.at<double>(0, 1), rotation_matrix.at<double>(0, 2),
-            //     rotation_matrix.at<double>(1, 0), rotation_matrix.at<double>(1, 1), rotation_matrix.at<double>(1, 2),
-            //     rotation_matrix.at<double>(2, 0), rotation_matrix.at<double>(2, 1), rotation_matrix.at<double>(2, 2)
-            // );
+            // 将 rvec 转换为旋转矩阵
+            cv::Mat rotation_matrix;
+            if (rvec.empty()) {
+                std::cerr << "rvec is empty, skipping this iteration." << std::endl;
+                return;
+            }
+            cv::Rodrigues(rvec, rotation_matrix);
 
-            // tf2::Quaternion quaternion;
-            // tf2_rotation_matrix.getRotation(quaternion);
+            // 将旋转矩阵转换为四元数
+            tf2::Matrix3x3 tf2_rotation_matrix(
+                rotation_matrix.at<double>(0, 0), rotation_matrix.at<double>(0, 1), rotation_matrix.at<double>(0, 2),
+                rotation_matrix.at<double>(1, 0), rotation_matrix.at<double>(1, 1), rotation_matrix.at<double>(1, 2),
+                rotation_matrix.at<double>(2, 0), rotation_matrix.at<double>(2, 1), rotation_matrix.at<double>(2, 2)
+            );
 
-            // // 创建 Pose 消息
-            // armor_interfaces::msg::Armor armor_msg;
-            // armor_msg.pose.position.x = tvec.at<double>(0, 0);
-            // armor_msg.pose.position.y = tvec.at<double>(1, 0);
-            // armor_msg.pose.position.z = tvec.at<double>(2, 0);
-            // armor_msg.pose.orientation = tf2::toMsg(quaternion);
+            tf2::Quaternion quaternion;
+            tf2_rotation_matrix.getRotation(quaternion);
+
+            // 创建 Pose 消息
+            armor_interfaces::msg::Armor armor_msg;
+            armor_msg.pose.position.x = tvec.at<double>(0, 0);
+            armor_msg.pose.position.y = tvec.at<double>(1, 0);
+            armor_msg.pose.position.z = tvec.at<double>(2, 0);
+            armor_msg.pose.orientation = tf2::toMsg(quaternion);
             
-            // // 将 cv::Point2f 转换为 geometry_msgs::msg::Point32
-            // std::vector<geometry_msgs::msg::Point32> msg_points;
-            // for (const auto& cv_point : armor_points) {
-            //     geometry_msgs::msg::Point32 msg_point;
-            //     msg_point.x = cv_point.x;
-            //     msg_point.y = cv_point.y;
-            //     msg_point.z = 0.0f;  // 默认值，通常设置为 0，因为 cv::Point2f 没有 z 坐标
-            //     msg_points.push_back(msg_point);
-            // }
+            // 将 cv::Point2f 转换为 geometry_msgs::msg::Point32
+            std::vector<geometry_msgs::msg::Point32> msg_points;
+            for (const auto& cv_point : armor_points) {
+                geometry_msgs::msg::Point32 msg_point;
+                msg_point.x = cv_point.x;
+                msg_point.y = cv_point.y;
+                msg_point.z = 0.0f;  // 默认值，通常设置为 0，因为 cv::Point2f 没有 z 坐标
+                msg_points.push_back(msg_point);
+            }
 
-            // armor_msg.distance_to_center = distence;
-            // armor_msg.apexs = msg_points;
+            armor_msg.distance_to_center = distence;
+            armor_msg.apexs = msg_points;
 
-            // // 发布消息
-            // m_armors_publish->publish(armor_msg);
+            // 发布消息
+            m_armors_publish->publish(armor_msg);
 
-            // ArmorInformation::getInstance().setTvec({});
-            // ArmorInformation::getInstance().setRvec({});
+            ArmorInformation::getInstance().setTvec({});
+            ArmorInformation::getInstance().setRvec({});
 
         } catch (const cv_bridge::Exception& e) {
             std::cerr << "cv_bridge exception: " << e.what() << std::endl;
