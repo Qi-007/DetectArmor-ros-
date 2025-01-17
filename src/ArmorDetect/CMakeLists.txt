@@ -31,16 +31,6 @@ ament_auto_add_library(${PROJECT_NAME} SHARED
   DIRECTORY src
 )
 
-##
-# add_executable(image_subscriber_node src/ArmorDetectNode/ImageSubscriberNode.cpp)
-# target_link_libraries(image_subscriber_node ${OpenCV_LIBS})
-# ament_target_dependencies(image_subscriber_node rclcpp sensor_msgs cv_bridge OpenCV)
-
-add_executable(video_reader_node src/ArmorDetectNode/VideoReaderNode.cpp)
-target_link_libraries(video_reader_node ${OpenCV_LIBS})
-ament_target_dependencies(video_reader_node rclcpp sensor_msgs cv_bridge OpenCV)
-##
-
 target_include_directories(${PROJECT_NAME} PUBLIC include )
 target_include_directories(${PROJECT_NAME} PUBLIC HikDriver)
 target_include_directories(${PROJECT_NAME} PUBLIC hik_sdk/include)
@@ -91,13 +81,6 @@ rclcpp_components_register_node(${PROJECT_NAME}
 #   DESTINATION lib/${PROJECT_NAME}
 # )
 # ##
-
-##
-install(TARGETS
-  video_reader_node
-  DESTINATION lib/${PROJECT_NAME}
-)
-##
 
 ament_auto_package(
 INSTALL_TO_SHARE

@@ -1,8 +1,0 @@
-{
-  "package_name": "armor_interfaces",
-  "non_idl_tuples": [
-    "/home/zjq/MY_CODE/detectArmor_ros/DetectArmor-ros-/src/armor_interfaces:msg/Armor.msg",
-    "/home/zjq/MY_CODE/detectArmor_ros/DetectArmor-ros-/src/armor_interfaces:msg/Armors.msg",
-    "/home/zjq/MY_CODE/detectArmor_ros/DetectArmor-ros-/src/armor_interfaces:msg/Target.msg"
-  ]
-}

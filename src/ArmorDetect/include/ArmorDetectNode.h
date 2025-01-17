@@ -50,7 +50,11 @@ public:
 private:
     //订阅图像节点
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr m_image_sub;
-    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr m_frame_sub;
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr image_sub_;
+    rclcpp::Time last_frame_time_; // 记录上一帧的时间戳
+    const double expected_interval_ = 0.033; // 期望帧间隔（30 FPS 对应 0.033 秒）
+    const double max_skip_factor_ = 3.0;     // 最大跳帧倍数
+
 
     // rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr m_cam_info_sub;
     std::shared_ptr<FrameMgr> m_frame_mgr;
@@ -60,7 +64,9 @@ private:
     std::thread m_detect_core;
 
     // Function
-    void subFrameCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
+    void FrameCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
+
+    void process_frame(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
   
 };
 
