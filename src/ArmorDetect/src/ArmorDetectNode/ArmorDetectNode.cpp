@@ -1,9 +1,12 @@
 #include "ArmorDetectNode.h"
 #include "detect.h"
+#include <armor_interfaces/msg/detail/armor__struct.hpp>
+#include <armor_interfaces/msg/detail/armors__struct.hpp>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/highgui.hpp>
 #include <sensor_msgs/msg/detail/image__struct.hpp>
 #include <cv_bridge/cv_bridge.h>
+#include <vector>
 
 ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) : 
     Node("armor_detector", options)
@@ -13,7 +16,7 @@ ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) :
     // m_pnpslover = std::make_shared<PnpSlover>();
 
     // 创建发布者 “armor_detector/armors”
-    m_armors_publish = this->create_publisher<armor_interfaces::msg::Armor>("armor_detector/armors", rclcpp::SensorDataQoS().keep_last(10));
+    m_armors_publish = this->create_publisher<armor_interfaces::msg::Armors>("armor_detector/armors", rclcpp::SensorDataQoS().keep_last(10));
 
     // 创建订阅者
     image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
@@ -114,8 +117,12 @@ ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) :
             armor_msg.distance_to_center = distence;
             armor_msg.apexs = msg_points;
 
+            armor_interfaces::msg::Armors armors_msg;
+
+            armors_msg.armors.push_back(armor_msg);
+
             // 发布消息
-            m_armors_publish->publish(armor_msg);
+            m_armors_publish->publish(armors_msg);
 
             ArmorInformation::getInstance().setTvec({});
             ArmorInformation::getInstance().setRvec({});

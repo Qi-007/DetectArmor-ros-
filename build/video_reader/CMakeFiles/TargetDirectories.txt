@@ -1,0 +1,10 @@
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/uninstall.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/video_reader_uninstall.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/video_reader_node.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/test.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/edit_cache.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/rebuild_cache.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/list_install_components.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/install.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/install/local.dir
+/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader/CMakeFiles/install/strip.dir

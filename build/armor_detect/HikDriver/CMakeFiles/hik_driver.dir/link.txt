@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhik_driver.a CMakeFiles/hik_driver.dir/src/HikDriver.cpp.o
+/usr/bin/ranlib libhik_driver.a

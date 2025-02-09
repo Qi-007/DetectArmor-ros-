@@ -42,8 +42,8 @@ private:
             return;
         }
 
-        cv::imshow("video_frame", frame);
-        cv::waitKey(1);
+        // cv::imshow("video_frame", frame);
+        // cv::waitKey(1);
 
         // 转换为 ROS 图像消息
         auto img_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", frame).toImageMsg();

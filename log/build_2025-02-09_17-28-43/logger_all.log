@@ -1,0 +1,597 @@
+[0.054s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.054s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7bec74d33160>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7bec74e7c580>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7bec74e7c580>>)
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.132s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.132s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zjq/MY_CODE/DetectArmor-ros-'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ros'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['cmake', 'python']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'python'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['python_setup_py']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'python_setup_py'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorDetect) by extension 'ros'
+[0.142s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ArmorDetect' with type 'ros.ament_cmake' and name 'armor_detect'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/ArmorTracker) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ArmorTracker' with type 'ros.ament_cmake' and name 'armor_tracker'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/ImageSubscriber) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ImageSubscriber' with type 'ros.ament_cmake' and name 'image_subscriber'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/armor_interfaces) by extension 'ros'
+[0.144s] DEBUG:colcon.colcon_core.package_identification:Package 'src/armor_interfaces' with type 'ros.ament_cmake' and name 'armor_interfaces'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/auto_aim) by extension 'ros'
+[0.144s] DEBUG:colcon.colcon_core.package_identification:Package 'src/auto_aim' with type 'ros.ament_cmake' and name 'auto_aim'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ros'
+[0.145s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/video_reader) by extension 'ros'
+[0.146s] DEBUG:colcon.colcon_core.package_identification:Package 'src/video_reader' with type 'ros.ament_cmake' and name 'video_reader'
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.158s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/zjq/MY_CODE/DetectArmor-ros-/install
+[0.159s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/humble
+[0.165s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'armor_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.184s] DEBUG:colcon.colcon_core.verb:Building package 'armor_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_target' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_clean_first' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'cmake_force_configure' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'ament_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'auto_aim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.184s] DEBUG:colcon.colcon_core.verb:Building package 'auto_aim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim', 'symlink_install': False, 'test_result_base': None}
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.184s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.184s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera', 'symlink_install': False, 'test_result_base': None}
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_target' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_clean_cache' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_clean_first' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'cmake_force_configure' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'ament_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'catkin_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'image_subscriber' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.185s] DEBUG:colcon.colcon_core.verb:Building package 'image_subscriber' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/ImageSubscriber', 'symlink_install': False, 'test_result_base': None}
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_target' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_clean_cache' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_clean_first' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'cmake_force_configure' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'ament_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'catkin_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'video_reader' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.185s] DEBUG:colcon.colcon_core.verb:Building package 'video_reader' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/video_reader', 'symlink_install': False, 'test_result_base': None}
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_target' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_clean_cache' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_clean_first' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'cmake_force_configure' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'ament_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'catkin_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_detect' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.185s] DEBUG:colcon.colcon_core.verb:Building package 'armor_detect' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorDetect', 'symlink_install': False, 'test_result_base': None}
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.185s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.185s] DEBUG:colcon.colcon_core.verb:Building package 'armor_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker', 'merge_install': False, 'path': '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker', 'symlink_install': False, 'test_result_base': None}
+[0.186s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.186s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.187s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces' with build type 'ament_cmake'
+[0.187s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces'
+[0.189s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.190s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.193s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera' with build type 'ament_cmake'
+[0.193s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera'
+[0.193s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.193s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.194s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim' with build type 'ament_cmake'
+[0.194s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim'
+[0.195s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.195s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.196s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ImageSubscriber' with build type 'ament_cmake'
+[0.196s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ImageSubscriber'
+[0.196s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.196s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.198s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/video_reader' with build type 'ament_cmake'
+[0.198s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/video_reader'
+[0.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces
+[0.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera
+[0.206s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim
+[0.209s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ImageSubscriber -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber
+[0.212s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/video_reader -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim -- -j22 -l22
+[0.961s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/video_reader -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader
+[0.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader -- -j22 -l22
+[0.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim -- -j22 -l22
+[0.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim
+[0.988s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim)
+[0.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' for CMake module files
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' for CMake config files
+[0.989s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim', 'cmake_prefix_path')
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.dsv'
+[0.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.sh'
+[0.991s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/bin'
+[0.991s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/lib/pkgconfig/auto_aim.pc'
+[0.992s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/lib/python3.10/site-packages'
+[0.992s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/bin'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.ps1'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.dsv'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.sh'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.bash'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.zsh'
+[0.994s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/colcon-core/packages/auto_aim)
+[0.994s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim)
+[0.994s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' for CMake module files
+[0.995s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim' for CMake config files
+[0.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim', 'cmake_prefix_path')
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.ps1'
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.dsv'
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/hook/cmake_prefix_path.sh'
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/bin'
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/lib/pkgconfig/auto_aim.pc'
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/lib/python3.10/site-packages'
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/bin'
+[0.996s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.ps1'
+[0.996s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.dsv'
+[0.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.sh'
+[0.998s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.bash'
+[0.998s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/package.zsh'
+[0.999s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/colcon-core/packages/auto_aim)
+[1.012s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ImageSubscriber -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber
+[1.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber -- -j22 -l22
+[1.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera
+[1.021s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera -- -j22 -l22
+[1.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces
+[1.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces -- -j22 -l22
+[3.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces -- -j22 -l22
+[3.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces
+[3.299s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_interfaces)
+[3.299s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' for CMake module files
+[3.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces
+[3.300s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' for CMake config files
+[3.300s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'cmake_prefix_path')
+[3.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.ps1'
+[3.301s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.dsv'
+[3.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.sh'
+[3.301s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib'
+[3.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'ld_library_path_lib')
+[3.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.ps1'
+[3.302s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.dsv'
+[3.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.sh'
+[3.302s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/bin'
+[3.302s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/pkgconfig/armor_interfaces.pc'
+[3.303s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/python3.10/site-packages'
+[3.303s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/bin'
+[3.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.ps1'
+[3.303s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.dsv'
+[3.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.sh'
+[3.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.bash'
+[3.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.zsh'
+[3.304s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/colcon-core/packages/armor_interfaces)
+[3.304s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_interfaces)
+[3.305s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' for CMake module files
+[3.305s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces' for CMake config files
+[3.305s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'cmake_prefix_path')
+[3.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.ps1'
+[3.306s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.dsv'
+[3.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/cmake_prefix_path.sh'
+[3.306s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib'
+[3.306s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_interfaces', 'ld_library_path_lib')
+[3.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.ps1'
+[3.307s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.dsv'
+[3.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/hook/ld_library_path_lib.sh'
+[3.307s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/bin'
+[3.307s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/pkgconfig/armor_interfaces.pc'
+[3.307s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/python3.10/site-packages'
+[3.307s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/bin'
+[3.307s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.ps1'
+[3.308s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.dsv'
+[3.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.sh'
+[3.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.bash'
+[3.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.zsh'
+[3.309s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/colcon-core/packages/armor_interfaces)
+[3.309s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker' with build type 'ament_cmake'
+[3.309s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker'
+[3.309s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.309s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker
+[3.999s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera -- -j22 -l22
+[4.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera
+[4.033s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[4.034s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' for CMake module files
+[4.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera
+[4.035s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' for CMake config files
+[4.035s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[4.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[4.036s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[4.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[4.037s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib'
+[4.037s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[4.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[4.037s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[4.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[4.038s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/bin'
+[4.038s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[4.038s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/python3.10/site-packages'
+[4.038s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/bin'
+[4.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.ps1'
+[4.038s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.dsv'
+[4.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.sh'
+[4.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.bash'
+[4.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.zsh'
+[4.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/colcon-core/packages/hik_camera)
+[4.040s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[4.040s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' for CMake module files
+[4.040s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera' for CMake config files
+[4.040s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[4.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[4.040s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[4.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[4.041s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib'
+[4.041s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[4.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[4.041s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[4.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[4.042s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/bin'
+[4.042s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[4.042s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/python3.10/site-packages'
+[4.042s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/bin'
+[4.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.ps1'
+[4.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.dsv'
+[4.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.sh'
+[4.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.bash'
+[4.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.zsh'
+[4.043s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/colcon-core/packages/hik_camera)
+[4.043s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorDetect' with build type 'ament_cmake'
+[4.043s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorDetect'
+[4.044s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.044s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorDetect -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect
+[4.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker
+[4.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker -- -j22 -l22
+[5.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorDetect -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect
+[5.146s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect -- -j22 -l22
+[5.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader -- -j22 -l22
+[5.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader
+[5.404s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(video_reader)
+[5.405s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' for CMake module files
+[5.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/video_reader
+[5.406s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' for CMake config files
+[5.406s] Level 1:colcon.colcon_core.shell:create_environment_hook('video_reader', 'cmake_prefix_path')
+[5.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.ps1'
+[5.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.dsv'
+[5.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.sh'
+[5.408s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib'
+[5.408s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/bin'
+[5.408s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib/pkgconfig/video_reader.pc'
+[5.409s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib/python3.10/site-packages'
+[5.409s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/bin'
+[5.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.ps1'
+[5.410s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.dsv'
+[5.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.sh'
+[5.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.bash'
+[5.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.zsh'
+[5.411s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/colcon-core/packages/video_reader)
+[5.412s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(video_reader)
+[5.412s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' for CMake module files
+[5.413s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader' for CMake config files
+[5.413s] Level 1:colcon.colcon_core.shell:create_environment_hook('video_reader', 'cmake_prefix_path')
+[5.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.ps1'
+[5.414s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.dsv'
+[5.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/hook/cmake_prefix_path.sh'
+[5.415s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib'
+[5.415s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/bin'
+[5.415s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib/pkgconfig/video_reader.pc'
+[5.415s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/lib/python3.10/site-packages'
+[5.415s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/bin'
+[5.416s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.ps1'
+[5.416s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.dsv'
+[5.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.sh'
+[5.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.bash'
+[5.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/video_reader/package.zsh'
+[5.418s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader/share/colcon-core/packages/video_reader)
+[8.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber -- -j22 -l22
+[8.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber
+[8.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_subscriber)
+[8.103s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' for CMake module files
+[8.103s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/image_subscriber
+[8.103s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' for CMake config files
+[8.103s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_subscriber', 'cmake_prefix_path')
+[8.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.ps1'
+[8.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.dsv'
+[8.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.sh'
+[8.104s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib'
+[8.104s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/bin'
+[8.105s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib/pkgconfig/image_subscriber.pc'
+[8.105s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib/python3.10/site-packages'
+[8.105s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/bin'
+[8.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.ps1'
+[8.105s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.dsv'
+[8.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.sh'
+[8.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.bash'
+[8.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.zsh'
+[8.106s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/colcon-core/packages/image_subscriber)
+[8.107s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_subscriber)
+[8.107s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' for CMake module files
+[8.107s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber' for CMake config files
+[8.107s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_subscriber', 'cmake_prefix_path')
+[8.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.ps1'
+[8.108s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.dsv'
+[8.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/hook/cmake_prefix_path.sh'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/bin'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib/pkgconfig/image_subscriber.pc'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/lib/python3.10/site-packages'
+[8.109s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/bin'
+[8.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.ps1'
+[8.109s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.dsv'
+[8.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.sh'
+[8.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.bash'
+[8.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/image_subscriber/package.zsh'
+[8.110s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber/share/colcon-core/packages/image_subscriber)
+[16.699s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect -- -j22 -l22
+[16.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect
+[16.710s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detect)
+[16.711s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' for CMake module files
+[16.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_detect
+[16.711s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' for CMake config files
+[16.711s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detect', 'cmake_prefix_path')
+[16.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.ps1'
+[16.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.dsv'
+[16.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.sh'
+[16.712s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib'
+[16.712s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detect', 'ld_library_path_lib')
+[16.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.ps1'
+[16.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.dsv'
+[16.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.sh'
+[16.713s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/bin'
+[16.713s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib/pkgconfig/armor_detect.pc'
+[16.713s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib/python3.10/site-packages'
+[16.713s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/bin'
+[16.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.ps1'
+[16.713s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.dsv'
+[16.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.sh'
+[16.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.bash'
+[16.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.zsh'
+[16.714s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/colcon-core/packages/armor_detect)
+[16.714s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detect)
+[16.714s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' for CMake module files
+[16.715s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect' for CMake config files
+[16.715s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detect', 'cmake_prefix_path')
+[16.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.ps1'
+[16.715s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.dsv'
+[16.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/cmake_prefix_path.sh'
+[16.715s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib'
+[16.715s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detect', 'ld_library_path_lib')
+[16.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.ps1'
+[16.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.dsv'
+[16.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/hook/ld_library_path_lib.sh'
+[16.716s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/bin'
+[16.716s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib/pkgconfig/armor_detect.pc'
+[16.716s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib/python3.10/site-packages'
+[16.716s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/bin'
+[16.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.ps1'
+[16.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.dsv'
+[16.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.sh'
+[16.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.bash'
+[16.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/armor_detect/package.zsh'
+[16.718s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/share/colcon-core/packages/armor_detect)
+[18.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker -- -j22 -l22
+[18.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker
+[18.189s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[18.190s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' for CMake module files
+[18.190s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces:/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim:/home/zjq/MY_CODE/DetectArmor-ros-/install/video_reader:/home/zjq/MY_CODE/DetectArmor-ros-/install/image_subscriber:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker:/opt/ros/humble LD_LIBRARY_PATH=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_detect/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib:/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_tracker
+[18.191s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' for CMake config files
+[18.191s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[18.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[18.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[18.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[18.193s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib'
+[18.193s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[18.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[18.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[18.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[18.193s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/bin'
+[18.193s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[18.194s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib/python3.10/site-packages'
+[18.194s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/bin'
+[18.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.ps1'
+[18.194s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.dsv'
+[18.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.sh'
+[18.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.bash'
+[18.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.zsh'
+[18.195s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[18.195s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[18.195s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' for CMake module files
+[18.195s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker' for CMake config files
+[18.196s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[18.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[18.196s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[18.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[18.196s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib'
+[18.196s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[18.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[18.197s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[18.197s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[18.197s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/bin'
+[18.197s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[18.197s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/lib/python3.10/site-packages'
+[18.197s] Level 1:colcon.colcon_core.environment:checking '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/bin'
+[18.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.ps1'
+[18.198s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.dsv'
+[18.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.sh'
+[18.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.bash'
+[18.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/armor_tracker/package.zsh'
+[18.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[18.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[18.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[18.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[18.199s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[18.202s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[18.202s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[18.202s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[18.214s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[18.214s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zjq/MY_CODE/DetectArmor-ros-/install/local_setup.ps1'
+[18.215s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zjq/MY_CODE/DetectArmor-ros-/install/_local_setup_util_ps1.py'
+[18.215s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zjq/MY_CODE/DetectArmor-ros-/install/setup.ps1'
+[18.216s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zjq/MY_CODE/DetectArmor-ros-/install/local_setup.sh'
+[18.216s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zjq/MY_CODE/DetectArmor-ros-/install/_local_setup_util_sh.py'
+[18.217s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zjq/MY_CODE/DetectArmor-ros-/install/setup.sh'
+[18.217s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zjq/MY_CODE/DetectArmor-ros-/install/local_setup.bash'
+[18.217s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zjq/MY_CODE/DetectArmor-ros-/install/setup.bash'
+[18.218s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zjq/MY_CODE/DetectArmor-ros-/install/local_setup.zsh'
+[18.218s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zjq/MY_CODE/DetectArmor-ros-/install/setup.zsh'

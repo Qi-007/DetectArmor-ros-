@@ -1,11 +1,15 @@
 #include "ArmorTrackerNode.h"
+#include "Ekf.hpp"
 #include "cv_bridge/cv_bridge.h"
+#include <armor_interfaces/msg/detail/armor__struct.hpp>
 #include <eigen3/Eigen/Core>
 #include <iostream>
+#include <rclcpp/logging.hpp>
 #include "geometry_msgs/msg/point32.hpp"
 
-
 typedef geometry_msgs::msg::Point32 PointType; 
+const int S_NUM = 4; // 状态维度 [x, y, vx, vy]
+const int M_NUM = 2; // 测量维度 [x, y]
 
 PointType calculateCenterPoint(const std::vector<PointType>& corners) {
     PointType center;
@@ -59,41 +63,16 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
     );
 
     // m_armors_sub = this->create_publisher<armor_interfaces::msg::Armor>("armor_detector/armors", rclcpp::SensorDataQoS());
-    m_armors_sub = this->create_subscription<armor_interfaces::msg::Armor>(
+    m_armors_sub = this->create_subscription<armor_interfaces::msg::Armors>(
         "armor_detector/armors", 
         rclcpp::SensorDataQoS(), 
         std::bind(&ArmorTrackerNode::subArmorsCallback, this, std::placeholders::_1)
     );
 
-        // 初始化卡尔曼滤波器
-        const int S_NUM = 4; // 状态维度 [x, y, vx, vy]
-        const int M_NUM = 2; // 测量维度 [x, y]
-
-        Eigen::Matrix<double, S_NUM, S_NUM> F = Eigen::Matrix<double, S_NUM, S_NUM>::Identity();
-        F(0, 2) = 1.0; // x_new = x + vx
-        F(1, 3) = 1.0; // y_new = y + vy
-
-        Eigen::Matrix<double, M_NUM, S_NUM> H;
-        H << 1, 0, 0, 0, 
-             0, 1, 0, 0;
-
-        Eigen::Matrix<double, S_NUM, S_NUM> Q = Eigen::Matrix<double, S_NUM, S_NUM>::Identity() * 0.01;
-        Eigen::Matrix<double, M_NUM, M_NUM> R = Eigen::Matrix<double, M_NUM, M_NUM>::Identity() * 0.1;
-        Eigen::Matrix<double, S_NUM, S_NUM> P = Eigen::Matrix<double, S_NUM, S_NUM>::Identity();
-
-        ekf_ = std::make_shared<Ekf<S_NUM, M_NUM>>(F, H, F, H, Q, R, P);
-
-        // 初始化状态
-        Eigen::Matrix<double, 1, S_NUM> init_state;
-        init_state << 0, 0, 0, 0;
-        ekf_->initState(init_state);
-
+    initEkf();
 }
 
     void ArmorTrackerNode::initEkf(){
-        // const int state_dim = 4;
-        // const int measurement_dim = 2;
-
         // 状态定义 [x, y, vx, vy]
         Eigen::Matrix<double, 1, 4> state_;
 
@@ -112,9 +91,9 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
         H << 1, 0, 0, 0,
             0, 1, 0, 0;
             
-        // 将 FJacobi 和 HJacobi设为单位矩阵
-        Eigen::Matrix<double, 4, 4> FJacobi = Eigen::Matrix<double, 4, 4>::Identity();
-        Eigen::Matrix<double, 2, 4> HJacobi = Eigen::Matrix<double, 2, 4>::Identity();
+        // // 将 FJacobi 和 HJacobi设为单位矩阵
+        // Eigen::Matrix<double, 4, 4> FJacobi = Eigen::Matrix<double, 4, 4>::Identity();
+        // Eigen::Matrix<double, 2, 4> HJacobi = Eigen::Matrix<double, 2, 4>::Identity();
 
         // 过程噪声协方差矩阵 Q
         Eigen::Matrix<double, 4, 4> Q;
@@ -131,19 +110,55 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
         // 初始误差协方差矩阵 P
         Eigen::Matrix<double, 4, 4> P = Eigen::Matrix<double, 4, 4>::Identity();
 
-        Ekf<4, 2> ekf(F, H, FJacobi, HJacobi, Q, R, P);
+        // Ekf<4, 2> ekf(F, H, FJacobi, HJacobi, Q, R, P);
+        ekf_ = std::make_shared<Ekf<S_NUM, M_NUM>> (F, H, Q, R, P);
     }
 
-void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armor::SharedPtr armors_msg) {
+void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::SharedPtr armors_msg) {
     if (!armors_msg) {
         RCLCPP_WARN(this->get_logger(), "Received an empty message!");
         return;
     }
 
-    PointType center = calculateCenterPoint(armors_msg->apexs);
+    if(armors_msg->armors.empty()){
+        RCLCPP_WARN(this->get_logger(), "No armor data received!");
+        return;
+    }
+
+    armor_interfaces::msg::Armor armor_msg = armors_msg->armors[0];
+    
+    PointType center = calculateCenterPoint(armor_msg.apexs);
+
+    // 如果是首次测量，初始化滤波器
+    if (is_first_measurement_) {
+        // 初始状态: [x, y, vx=0, vy=0]
+        Eigen::Matrix<double, S_NUM, 1> init_state;
+        init_state << center.x, center.y, 0.0, 0.0;
+
+        // 初始化状态（修正原硬编码错误）
+        ekf_->initState(init_state);       
+
+        // 记录首次时间戳
+        last_time_ = armors_msg->header.stamp;
+        is_first_measurement_ = false;
+        return; // 不进行预测/更新，直接退出
+    }
+
+    rclcpp::Time current_time = armors_msg->header.stamp; 
+    double dt = (current_time - last_time_).seconds();
+    last_time_ = current_time;
+
+    // 更新 F 矩阵中的 dt
+    Eigen::Matrix<double, 4, 4> F;
+    F << 1, 0, dt, 0,
+        0, 1, 0, dt,
+        0, 0, 1, 0,
+        0, 0, 0, 1;
+        
+    ekf_->setF(F); // 确保 Ekf 类支持动态更新 F
 
     // 当前测量值
-    Eigen::Matrix<double, 1, 2> measurement;
+    Eigen::Matrix<double, M_NUM, 1> measurement;
     measurement << center.x, center.y;
 
     // 更新卡尔曼滤波器
@@ -151,7 +166,9 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armor::Sha
     ekf_->update(measurement);
 
     // 获取预测状态
-    Eigen::Matrix<double, 1, 4> predicted_state = ekf_->getState();
+    Eigen::Matrix<double, S_NUM, 1> predicted_state = ekf_->getState();
+    double x = predicted_state(0);
+    double y = predicted_state(1);
 
     // // 构造预测结果消息
     // geometry_msgs::msg::PointStamped predicted_msg;
@@ -164,7 +181,8 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armor::Sha
     // // 发布预测结果
     // predicted_armor_publisher_->publish(predicted_msg); 
 
-    std::cout << "predicted_state.x: " << predicted_state.x() << std::endl;
+    std::cout << "predicted.x: " << x << std::endl;
+    std::cout << "predicted.y: " << y << std::endl;
 }
 
 
@@ -177,11 +195,11 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armor::Sha
             // 获取预测状态
             Eigen::Matrix<double, 1, 4> predicted_state = ekf_->getState();
 
-            double predicted_x = predicted_state(0, 0); // 提取 x 坐标
-            double predicted_y = predicted_state(0, 1);
+            cv::Point predicted_point(
+                static_cast<int>(predicted_state(0)), // x 对应列
+                static_cast<int>(predicted_state(1))  // y 对应行
+            );
 
-            // 在图像上绘制预测点
-            cv::Point predicted_point(predicted_x, predicted_y);
             cv::circle(frame, predicted_point, 5, cv::Scalar(0, 255, 0), -1); // 绿色圆点
 
             // 显示图像

@@ -1,0 +1,286 @@
+[0.015s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces
+[0.062s] -- The C compiler identification is GNU 11.4.0
+[0.107s] -- The CXX compiler identification is GNU 11.4.0
+[0.112s] -- Detecting C compiler ABI info
+[0.163s] -- Detecting C compiler ABI info - done
+[0.168s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.168s] -- Detecting C compile features
+[0.168s] -- Detecting C compile features - done
+[0.170s] -- Detecting CXX compiler ABI info
+[0.220s] -- Detecting CXX compiler ABI info - done
+[0.225s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.225s] -- Detecting CXX compile features
+[0.225s] -- Detecting CXX compile features - done
+[0.226s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.341s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.397s] -- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.399s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.418s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.420s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.424s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.431s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.439s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.460s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.659s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.928s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.081s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.100s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.101s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.132s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.132s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.132s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.132s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.157s] -- Found PythonExtra: .so  
+[1.203s] -- Configuring done
+[1.225s] -- Generating done
+[1.233s] -- Build files have been written to: /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces
+[1.242s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/armor_interfaces -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces
+[1.243s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces -- -j22 -l22
+[1.284s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.288s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.299s] [  4%] Built target ament_cmake_python_copy_armor_interfaces
+[1.440s] running egg_info
+[1.441s] creating armor_interfaces.egg-info
+[1.441s] writing armor_interfaces.egg-info/PKG-INFO
+[1.441s] writing dependency_links to armor_interfaces.egg-info/dependency_links.txt
+[1.441s] writing top-level names to armor_interfaces.egg-info/top_level.txt
+[1.441s] writing manifest file 'armor_interfaces.egg-info/SOURCES.txt'
+[1.442s] reading manifest file 'armor_interfaces.egg-info/SOURCES.txt'
+[1.442s] writing manifest file 'armor_interfaces.egg-info/SOURCES.txt'
+[1.473s] [  4%] Built target ament_cmake_python_build_armor_interfaces_egg
+[1.534s] [  4%] Built target armor_interfaces__cpp
+[1.544s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.544s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.545s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.592s] [ 12%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/armor__functions.c.o[0m
+[1.594s] [ 17%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/armors__functions.c.o[0m
+[1.594s] [ 17%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/armor_interfaces/msg/detail/target__functions.c.o[0m
+[1.645s] [ 19%] [32m[1mLinking C shared library libarmor_interfaces__rosidl_generator_c.so[0m
+[1.687s] [ 19%] Built target armor_interfaces__rosidl_generator_c
+[1.698s] [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.699s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.699s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.748s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/target__type_support.cpp.o[0m
+[1.748s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/armors__type_support.cpp.o[0m
+[1.748s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/armor_interfaces/msg/armor__type_support.cpp.o[0m
+[1.788s] [ 36%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armor__type_support.cpp.o[0m
+[1.788s] [ 36%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/target__type_support.cpp.o[0m
+[1.789s] [ 38%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/armor_interfaces/msg/detail/dds_fastrtps/armors__type_support.cpp.o[0m
+[1.908s] [ 40%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armors__type_support.cpp.o[0m
+[1.908s] [ 42%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/target__type_support.cpp.o[0m
+[1.911s] [ 44%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/armor_interfaces/msg/detail/armor__type_support.cpp.o[0m
+[1.937s] [ 46%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/target__type_support_c.cpp.o[0m
+[1.938s] [ 48%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armor__type_support_c.cpp.o[0m
+[1.938s] [ 51%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/armor_interfaces/msg/detail/armors__type_support_c.cpp.o[0m
+[1.981s] [ 53%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/target__type_support.cpp.o[0m
+[1.981s] [ 55%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/armor__type_support.cpp.o[0m
+[1.982s] [ 57%] [32mBuilding CXX object CMakeFiles/armor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/armor_interfaces/msg/armors__type_support.cpp.o[0m
+[2.021s] [ 59%] [32m[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_c.so[0m
+[2.058s] [ 61%] [32m[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_cpp.so[0m
+[2.076s] [ 61%] Built target armor_interfaces__rosidl_typesupport_c
+[2.077s] [ 63%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armor__type_support.c.o[0m
+[2.078s] [ 65%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/target__type_support.c.o[0m
+[2.078s] [ 68%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/armor_interfaces/msg/detail/armors__type_support.c.o[0m
+[2.103s] [ 68%] Built target armor_interfaces__rosidl_typesupport_cpp
+[2.112s] [ 70%] [32m[1mLinking C shared library libarmor_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.139s] [ 70%] Built target armor_interfaces__rosidl_typesupport_introspection_c
+[2.189s] [ 72%] [32m[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.253s] [ 72%] Built target armor_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.302s] [ 74%] [32m[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.345s] [ 76%] [32m[1mLinking CXX shared library libarmor_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.366s] [ 76%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c
+[2.404s] [ 76%] Built target armor_interfaces__rosidl_typesupport_introspection_cpp
+[2.423s] [ 76%] Built target armor_interfaces
+[2.444s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.753s] [ 78%] Built target armor_interfaces__py
+[2.768s] [ 80%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_target_s.c.o[0m
+[2.769s] [ 82%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armor_s.c.o[0m
+[2.769s] [ 85%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/armor_interfaces/msg/_armors_s.c.o[0m
+[2.855s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/armor_interfaces/libarmor_interfaces__rosidl_generator_py.so[0m
+[2.887s] [ 87%] Built target armor_interfaces__rosidl_generator_py
+[2.907s] [ 91%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.908s] [ 91%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.908s] [ 93%] [32mBuilding C object CMakeFiles/armor_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.971s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.971s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.007s] [ 97%] Built target armor_interfaces__rosidl_typesupport_c__pyext
+[3.008s] [100%] [32m[1mLinking C shared library rosidl_generator_py/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.012s] [100%] Built target armor_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.047s] [100%] Built target armor_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.056s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces -- -j22 -l22
+[3.058s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces
+[3.064s] -- Install configuration: ""
+[3.064s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/ament_index/resource_index/rosidl_interfaces/armor_interfaces
+[3.064s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.064s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.064s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/target.h
+[3.064s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__struct.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__struct.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__functions.c
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__type_support.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__type_support.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__type_support.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__functions.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__struct.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__functions.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__functions.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__functions.c
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__functions.c
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armors.h
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/library_path.sh
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/library_path.dsv
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so
+[3.065s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_c.so" to ""
+[3.065s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.065s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.065s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.065s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_c.h
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_c.h
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_c.h
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.066s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.066s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.066s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armor.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/armors.hpp
+[3.066s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__traits.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__struct.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__type_support.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__builder.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__struct.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__type_support.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__traits.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__builder.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__traits.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__struct.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__type_support.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__builder.hpp
+[3.066s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/target.hpp
+[3.066s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.066s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.067s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_cpp.hpp
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_cpp.hpp
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/dds_fastrtps
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_cpp.hpp
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.067s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.067s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.067s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.067s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__rosidl_typesupport_introspection_c.h
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__rosidl_typesupport_introspection_c.h
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__type_support.c
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__type_support.c
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__type_support.c
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__rosidl_typesupport_introspection_c.h
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so
+[3.067s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.067s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so
+[3.068s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_c.so" to ""
+[3.068s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces
+[3.068s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg
+[3.068s] -- Up-to-date: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__rosidl_typesupport_introspection_cpp.hpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__rosidl_typesupport_introspection_cpp.hpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__rosidl_typesupport_introspection_cpp.hpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armor__type_support.cpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/target__type_support.cpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/include/armor_interfaces/armor_interfaces/msg/detail/armors__type_support.cpp
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.068s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so
+[3.068s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.sh
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/pythonpath.dsv
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.068s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/__init__.py
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_c.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/__init__.py
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor.py
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_target.py
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armors.py
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_target_s.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor_s.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armors_s.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/libarmor_interfaces__rosidl_generator_py.so
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/_armor_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.069s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.099s] Listing '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces'...
+[3.099s] Compiling '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/__init__.py'...
+[3.100s] Listing '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg'...
+[3.100s] Compiling '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/__init__.py'...
+[3.100s] Compiling '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armor.py'...
+[3.100s] Compiling '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_armors.py'...
+[3.100s] Compiling '/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/msg/_target.py'...
+[3.103s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.103s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.103s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.103s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.103s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.103s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/local/lib/python3.10/dist-packages/armor_interfaces/armor_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so
+[3.104s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/lib/libarmor_interfaces__rosidl_generator_py.so" to ""
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Armor.idl
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Armors.idl
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Target.idl
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Armor.msg
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Armors.msg
+[3.104s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/msg/Target.msg
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/ament_index/resource_index/package_run_dependencies/armor_interfaces
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/ament_index/resource_index/parent_prefix_path/armor_interfaces
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.sh
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/ament_prefix_path.dsv
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/path.sh
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/environment/path.dsv
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/local_setup.bash
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/local_setup.sh
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/local_setup.zsh
+[3.105s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/local_setup.dsv
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.dsv
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/ament_index/resource_index/packages/armor_interfaces
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport.cmake
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_cppExport.cmake
+[3.106s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport.cmake
+[3.107s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/export_armor_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig.cmake
+[3.108s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/cmake/armor_interfacesConfig-version.cmake
+[3.109s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/armor_interfaces/share/armor_interfaces/package.xml
+[3.112s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/armor_interfaces
