@@ -1,4 +1,0 @@
-armor_tracker_node:
-  ros__parameters:
-    u_vel: 0.0
-    v_vel: 100.0

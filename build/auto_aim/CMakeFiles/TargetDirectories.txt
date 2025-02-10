@@ -1,9 +1,0 @@
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/uninstall.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/auto_aim_uninstall.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/test.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/edit_cache.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/rebuild_cache.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/list_install_components.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/install.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/install/local.dir
-/home/zjq/MY_CODE/DetectArmor-ros-/build/auto_aim/CMakeFiles/install/strip.dir

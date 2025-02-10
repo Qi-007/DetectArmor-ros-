@@ -63,8 +63,24 @@ void printApexs(const std::vector<PointType>& apexs){
 ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) : 
     Node("armor_tracker", options)
 {
-    this->declare_parameter("u_vel", -1.0);
-    this->declare_parameter("v_vel", -1.0);
+    this->declare_parameter("u_vel", 0.0);
+    this->declare_parameter("v_vel", 0.0);
+
+    // 参数回调监听
+    m_param_callback_handle = this->add_on_set_parameters_callback(
+        [this](const std::vector<rclcpp::Parameter> &params) {
+            for (const auto &param : params) {
+                if (param.get_name() == "u_vel") {
+                    u_vel_ = param.as_double();
+                    RCLCPP_INFO(this->get_logger(), "Updated u_vel: %f", u_vel_);
+                } else if (param.get_name() == "v_vel") {
+                    v_vel_ = param.as_double();
+                    RCLCPP_INFO(this->get_logger(), "Updated v_vel: %f", v_vel_);
+                }
+            }
+            return rcl_interfaces::msg::SetParametersResult().set__successful(true);
+        }
+    );
 
     RCLCPP_INFO(this->get_logger(), "ArmorPredictNode is running...");
 
@@ -139,9 +155,6 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         return;
     }
 
-    double u_vel = this->get_parameter("u_vel").as_double();
-    double v_vel = this->get_parameter("v_vel").as_double();
-
     armor_interfaces::msg::Armor armor_msg = armors_msg->armors[0];
     
     PointType center = calculateCenterPoint(armor_msg.apexs);
@@ -160,7 +173,7 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         // 初始状态: [x, y, vx=0, vy=0]
         Eigen::Matrix<double, S_NUM, 1> init_state;
 
-        init_state << u, v, u_vel, v_vel;
+        init_state << u, v, u_vel_, v_vel_;
         // init_state << 100.0, 100.0, 0.0, 0.0;
         
         // 初始化状态（修正原硬编码错误）

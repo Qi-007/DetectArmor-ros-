@@ -44,6 +44,11 @@ private:
     bool is_first_measurement_ = true;
     Eigen::Vector4d latest_predicted_state_;  // 缓存最近一次预测结果
     bool has_predicted_state_ = false;        // 标记是否已有预测数据
+
+    double u_vel_ = 0.0;
+    double v_vel_ = 0.0;
+    rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr m_param_callback_handle;
+
 };
 
 #endif //
