@@ -3,6 +3,7 @@
 
 // #include <Eigen/src/Core/Matrix.h>
 // #include <Eigen/Core>
+#include <cmath>
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 #include <rclcpp/subscription.hpp>
@@ -19,7 +20,7 @@
 #include "armor_interfaces/msg/armor.hpp"
 #include "armor_interfaces/msg/armors.hpp"
 
-template class Ekf<4, 2>;  // 显式实例化模板
+template class Ekf<double, 4, 2>;  // 显式实例化模板
 
 class ArmorTrackerNode : public rclcpp::Node{
 public:
@@ -37,13 +38,12 @@ private:
     rclcpp::Subscription<armor_interfaces::msg::Armors>::SharedPtr m_armors_sub;
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr m_frame_sub; 
 
+    std::shared_ptr<Ekf<double, 4, 2>> ekf_; // 卡尔曼滤波器对象
+
     rclcpp::Time last_time_;
     bool is_first_measurement_ = true;
-    std::shared_ptr<Ekf<4, 2>> ekf_; // 卡尔曼滤波器对象
-
-    // Eigen::Matrix<double, 1, 4> state_;  // 记录状态向量
-    // rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr predicted_armor_publisher_;
-
+    Eigen::Vector4d latest_predicted_state_;  // 缓存最近一次预测结果
+    bool has_predicted_state_ = false;        // 标记是否已有预测数据
 };
 
 #endif //

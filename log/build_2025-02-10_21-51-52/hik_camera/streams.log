@@ -1,0 +1,120 @@
+[0.013s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera
+[0.051s] -- The C compiler identification is GNU 11.4.0
+[0.086s] -- The CXX compiler identification is GNU 11.4.0
+[0.091s] -- Detecting C compiler ABI info
+[0.141s] -- Detecting C compiler ABI info - done
+[0.145s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.146s] -- Detecting C compile features
+[0.146s] -- Detecting C compile features - done
+[0.148s] -- Detecting CXX compiler ABI info
+[0.212s] -- Detecting CXX compiler ABI info - done
+[0.216s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.217s] -- Detecting CXX compile features
+[0.217s] -- Detecting CXX compile features - done
+[0.218s] -- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.319s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.428s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.430s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.434s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.440s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.449s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.472s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.473s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.527s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.542s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.574s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.578s] -- Looking for pthread.h
+[0.633s] -- Looking for pthread.h - found
+[0.633s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.687s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.689s] -- Found Threads: TRUE  
+[0.795s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.809s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.809s] -- Configured cppcheck include dirs: /home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera/include;/home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera/hik_sdk/include
+[0.809s] -- Configured cppcheck exclude dirs and/or files: 
+[0.809s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.809s] -- Added test 'lint_cmake' to check CMake code style
+[0.810s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.811s] -- Added test 'xmllint' to check XML markup files
+[0.812s] -- Configuring done
+[0.821s] -- Generating done
+[0.825s] -- Build files have been written to: /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera
+[0.838s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zjq/MY_CODE/DetectArmor-ros-/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera
+[0.839s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera -- -j22 -l22
+[0.877s] [ 20%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/rclcpp_components/node_main_hik_camera_node.cpp.o[0m
+[0.880s] [ 40%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_setup.cpp.o[0m
+[0.881s] [ 60%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[3.019s] [ 80%] [32m[1mLinking CXX executable hik_camera_node[0m
+[3.108s] [ 80%] Built target hik_camera_node
+[3.761s] [100%] [32m[1mLinking CXX shared library libhik_camera.so[0m
+[3.881s] [100%] Built target hik_camera
+[3.893s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera -- -j22 -l22
+[3.895s] Invoking command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera
+[3.904s] -- Install configuration: ""
+[3.904s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib
+[3.904s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvFGProducerCXP.cti
+[3.904s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libLog_gcc447_v3_0.so
+[3.904s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCamLVision.so.4.1.0.3
+[3.907s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libGCBase_gcc447_v3_0.so
+[3.907s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCameraControlWrapper.so
+[3.907s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCamLVision.so
+[3.912s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libFormatConversion.so
+[3.912s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMVRender.so
+[3.912s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvProducerGEV.cti
+[3.912s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvFGProducerGEV.cti
+[3.913s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCameraControlWrapper.so.1.0.1.0
+[3.913s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvFGProducerXoF.cti
+[3.913s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMVGigEVisionSDK.so.4.1.2.2
+[3.913s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libGenCP_gcc447_v3_0.so
+[3.913s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvFGProducerCML.cti
+[3.914s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/CommonParameters.ini
+[3.914s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libCLProtocol_gcc447_v3_0.so
+[3.914s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libCLAllSerial_gcc447_v3_0.so
+[3.914s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/MvProducerU3V.cti
+[3.914s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMVFGControl.so
+[3.918s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCameraControl.so.4.1.2.2
+[3.922s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libusb-1.0.so.0
+[3.922s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMediaProcess.so
+[3.923s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libCLSerCOM.so
+[3.923s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvUsb3vTL.so.4.1.2.2
+[3.924s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMVGigEVisionSDK.so
+[3.924s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libavutil.so
+[3.925s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/liblog4cpp_gcc447_v3_0.so
+[3.925s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvCameraControl.so
+[3.929s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libMvUsb3vTL.so
+[3.929s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libCLSerHvc.so
+[3.929s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libswscale.so
+[3.931s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/hik_camera/hik_camera_node
+[3.931s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/hik_camera/hik_camera_node" to ""
+[3.931s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/include
+[3.931s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/include/hik_camera_node.h
+[3.931s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/include/hik_camera_setup.h
+[3.931s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/library_path.sh
+[3.932s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/library_path.dsv
+[3.932s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libhik_camera.so
+[3.933s] -- Set runtime path of "/home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/lib/libhik_camera.so" to ""
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/config
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/config/camera_params.yaml
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/config/camera_info.yaml
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/launch
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/launch/hik_camera.launch.py
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/path.sh
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/environment/path.dsv
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/local_setup.bash
+[3.933s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/local_setup.sh
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/local_setup.zsh
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/local_setup.dsv
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.dsv
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/ament_index/resource_index/rclcpp_components/hik_camera
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+[3.934s] -- Installing: /home/zjq/MY_CODE/DetectArmor-ros-/install/hik_camera/share/hik_camera/package.xml
+[3.937s] Invoked command in '/home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zjq/MY_CODE/DetectArmor-ros-/build/hik_camera

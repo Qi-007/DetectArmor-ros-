@@ -109,16 +109,11 @@ void ArmorDetect::imageDetect(cv::Mat& frame){
         }
     }
 
-    cv::imshow("前哨站", frame);
+    // cv::imshow("前哨站", frame);
+    // cv::waitKey(1);
 
     all_contours.clear();       // 清空上一帧的轮廓
     lights.clear();    // 清空上一帧筛选的矩形
     matching_lights.clear();    // 清空上一帧的配对灯条
     foundArmor.clear();     // 清空上一帧的装甲板
-    // armor.clear();     
-
-    cv::waitKey(1);
-
-    // cv::destroyAllWindows();
-
 }

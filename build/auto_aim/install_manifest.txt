@@ -1,3 +1,4 @@
+/home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/config/auto_aim_params.yaml
 /home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/auto_aim/launch/translation_armor.launch.py
 /home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/ament_index/resource_index/package_run_dependencies/auto_aim
 /home/zjq/MY_CODE/DetectArmor-ros-/install/auto_aim/share/ament_index/resource_index/parent_prefix_path/auto_aim

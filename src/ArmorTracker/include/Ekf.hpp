@@ -4,21 +4,30 @@
 #include <eigen3/Eigen/Core>
 #include <iostream>
 
-
-// 卡尔曼
-template<int S_NUM, int M_NUM>
+template<typename T = double, int S_NUM = 4, int M_NUM = 2>
 class Ekf {
 public:
-    typedef Eigen::Matrix<double, S_NUM, S_NUM> F;
-    typedef Eigen::Matrix<double, M_NUM, S_NUM> H;
-    typedef Eigen::Matrix<double, S_NUM, S_NUM> FJacobi;
-    typedef Eigen::Matrix<double, M_NUM, S_NUM> HJacobi;
-    typedef Eigen::Matrix<double, S_NUM, S_NUM> Q;
-    typedef Eigen::Matrix<double, M_NUM, M_NUM> R;
-    typedef Eigen::Matrix<double, S_NUM, S_NUM> P;
-    typedef Eigen::Matrix<double, S_NUM, 1> State;      
-    typedef Eigen::Matrix<double, M_NUM, 1> Measurement;
-    typedef Eigen::Matrix<double, S_NUM, M_NUM> K;
+    // typedef Eigen::Matrix<double, S_NUM, S_NUM> F;
+    // typedef Eigen::Matrix<double, M_NUM, S_NUM> H;
+    // typedef Eigen::Matrix<double, S_NUM, S_NUM> FJacobi;
+    // typedef Eigen::Matrix<double, M_NUM, S_NUM> HJacobi;
+    // typedef Eigen::Matrix<double, S_NUM, S_NUM> Q;
+    // typedef Eigen::Matrix<double, M_NUM, M_NUM> R;
+    // typedef Eigen::Matrix<double, S_NUM, S_NUM> P;
+    // typedef Eigen::Matrix<double, S_NUM, 1> State;      
+    // typedef Eigen::Matrix<double, M_NUM, 1> Measurement;
+    // typedef Eigen::Matrix<double, S_NUM, M_NUM> K;
+
+    using F = Eigen::Matrix<double, S_NUM, S_NUM>;
+    using H = Eigen::Matrix<double, M_NUM, S_NUM>;
+    using FJacobi = Eigen::Matrix<double, S_NUM, S_NUM>;
+    using HJacobi = Eigen::Matrix<double, M_NUM, S_NUM>;
+    using Q = Eigen::Matrix<double, S_NUM, S_NUM>;
+    using R = Eigen::Matrix<double, M_NUM, M_NUM>;
+    using P = Eigen::Matrix<double, S_NUM, S_NUM>;
+    using State = Eigen::Matrix<double, S_NUM, 1>;
+    using Measurement = Eigen::Matrix<double, M_NUM, 1>;
+    using K = Eigen::Matrix<double, S_NUM, M_NUM>;
 
     Ekf() = default;  // 默认构造函数
 
@@ -64,6 +73,7 @@ public:
         m_f = new_F;
     }
 
+    State getPreState() {return m_pre_state;}
     State getState() {return m_state;}
     P getP() {return m_p;}
     virtual ~Ekf() {
@@ -83,6 +93,7 @@ private:
     State m_pre_state;
     K m_k;
     Measurement m_measurement;
+
 };
 
 

@@ -43,6 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auto_aim" TYPE DIRECTORY FILES "/home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim/config")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auto_aim" TYPE DIRECTORY FILES "/home/zjq/MY_CODE/DetectArmor-ros-/src/auto_aim/launch")
 endif()
 

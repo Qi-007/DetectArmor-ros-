@@ -2,9 +2,6 @@ CMakeFiles/armor_tracker.dir/src/ArmorTrackerNode.cpp.o: \
  /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker/src/ArmorTrackerNode.cpp \
  /usr/include/stdc-predef.h \
  /home/zjq/MY_CODE/DetectArmor-ros-/src/ArmorTracker/include/ArmorTrackerNode.h \
- /usr/include/eigen3/Eigen/Core \
- /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
- /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
  /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -91,7 +88,9 @@ CMakeFiles/armor_tracker.dir/src/ArmorTrackerNode.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
  /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \

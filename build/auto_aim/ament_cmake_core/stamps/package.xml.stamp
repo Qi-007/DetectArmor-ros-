@@ -11,11 +11,18 @@
 
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>ament_index_python</depend>
+
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
+    <launch>
+      <launch_file>translation_armor.launch.py</launch_file>
+    </launch>
   </export>
 </package>

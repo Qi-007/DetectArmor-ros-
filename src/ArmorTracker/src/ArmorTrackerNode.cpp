@@ -11,6 +11,16 @@ typedef geometry_msgs::msg::Point32 PointType;
 const int S_NUM = 4; // 状态维度 [x, y, vx, vy]
 const int M_NUM = 2; // 测量维度 [x, y]
 
+// 相机内参
+std::array<double, 9> intrinsic_matrix = {1806.202836613486, 0, 706.479880371389,
+                                    0, 1812.980528629544, 546.7058549527911,
+                                    0, 0, 1};
+
+double fx = intrinsic_matrix[0];  // 焦距 fx
+double fy = intrinsic_matrix[4];  // 焦距 fy
+double cx = intrinsic_matrix[2];  // 光心 cx
+double cy = intrinsic_matrix[5];  // 光心 cy
+
 PointType calculateCenterPoint(const std::vector<PointType>& corners) {
     PointType center;
 
@@ -53,6 +63,9 @@ void printApexs(const std::vector<PointType>& apexs){
 ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) : 
     Node("armor_tracker", options)
 {
+    this->declare_parameter("u_vel", -1.0);
+    this->declare_parameter("v_vel", -1.0);
+
     RCLCPP_INFO(this->get_logger(), "ArmorPredictNode is running...");
 
     // 订阅原始图像 " video_frames " 主题  
@@ -74,20 +87,20 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
 
     void ArmorTrackerNode::initEkf(){
         // 状态定义 [x, y, vx, vy]
-        Eigen::Matrix<double, 1, 4> state_;
+        // Eigen::Matrix<double, 1, 4> state_;
 
         // 时间间隔
         double delta_t = 0.01;
 
         // 状态转移矩阵 F
-        Eigen::Matrix<double, 4, 4> F;
+        Eigen::Matrix<double, S_NUM, S_NUM> F;
         F << 1, 0, delta_t, 0,
             0, 1, 0, delta_t,
             0, 0, 1, 0,
             0, 0, 0, 1;
 
         // 观测矩阵 H
-        Eigen::Matrix<double, 2, 4> H;
+        Eigen::Matrix<double, M_NUM, S_NUM> H;
         H << 1, 0, 0, 0,
             0, 1, 0, 0;
             
@@ -97,21 +110,22 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
 
         // 过程噪声协方差矩阵 Q
         Eigen::Matrix<double, 4, 4> Q;
-        Q << 0.5, 0, 0, 0,
-            0, 0.5, 0, 0,
-            0, 0, 0.1, 0,
-            0, 0, 0, 0.1;
+        Q << 0.01, 0, 0.001, 0,
+        0, 0.01, 0, 0.001,
+        0.001, 0, 0.01, 0,
+        0, 0.001, 0, 0.01;
 
         // 观测噪声协方差矩阵 R
         Eigen::Matrix<double, 2, 2> R;
-        R << 1.0, 0,
-            0, 1.0;
+        R << 0.5, 0,
+            0, 0.5;
 
         // 初始误差协方差矩阵 P
         Eigen::Matrix<double, 4, 4> P = Eigen::Matrix<double, 4, 4>::Identity();
+        P *= 0.1;
 
         // Ekf<4, 2> ekf(F, H, FJacobi, HJacobi, Q, R, P);
-        ekf_ = std::make_shared<Ekf<S_NUM, M_NUM>> (F, H, Q, R, P);
+        ekf_ = std::make_shared<Ekf<double, S_NUM, M_NUM>> (F, H, Q, R, P);
     }
 
 void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::SharedPtr armors_msg) {
@@ -125,16 +139,30 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         return;
     }
 
+    double u_vel = this->get_parameter("u_vel").as_double();
+    double v_vel = this->get_parameter("v_vel").as_double();
+
     armor_interfaces::msg::Armor armor_msg = armors_msg->armors[0];
     
     PointType center = calculateCenterPoint(armor_msg.apexs);
+
+    // 计算归一化相机坐标
+    double u = (center.x - cx) / fx;
+    double v = (center.y - cy) / fy;
+
+    // 归一化相机坐标作为测量值输入到 EKF
+    Eigen::Matrix<double, M_NUM, 1> measurement;
+    measurement << u, v;
+
 
     // 如果是首次测量，初始化滤波器
     if (is_first_measurement_) {
         // 初始状态: [x, y, vx=0, vy=0]
         Eigen::Matrix<double, S_NUM, 1> init_state;
-        init_state << center.x, center.y, 0.0, 0.0;
 
+        init_state << u, v, u_vel, v_vel;
+        // init_state << 100.0, 100.0, 0.0, 0.0;
+        
         // 初始化状态（修正原硬编码错误）
         ekf_->initState(init_state);       
 
@@ -142,11 +170,14 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         last_time_ = armors_msg->header.stamp;
         is_first_measurement_ = false;
         return; // 不进行预测/更新，直接退出
-    }
+    } 
 
     rclcpp::Time current_time = armors_msg->header.stamp; 
     double dt = (current_time - last_time_).seconds();
     last_time_ = current_time;
+    if (dt <= 0 || dt > 1.0) {  // 避免异常情况
+        dt = 0.1;
+    }
 
     // 更新 F 矩阵中的 dt
     Eigen::Matrix<double, 4, 4> F;
@@ -157,58 +188,67 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         
     ekf_->setF(F); // 确保 Ekf 类支持动态更新 F
 
-    // 当前测量值
-    Eigen::Matrix<double, M_NUM, 1> measurement;
-    measurement << center.x, center.y;
-
+    // // 当前测量值
+    // Eigen::Matrix<double, M_NUM, 1> measurement;
+    // measurement << center.x, center.y;
+    
     // 更新卡尔曼滤波器
     ekf_->predict();
     ekf_->update(measurement);
 
-    // 获取预测状态
-    Eigen::Matrix<double, S_NUM, 1> predicted_state = ekf_->getState();
-    double x = predicted_state(0);
-    double y = predicted_state(1);
-
-    // // 构造预测结果消息
-    // geometry_msgs::msg::PointStamped predicted_msg;
-    // predicted_msg.header.stamp = this->get_clock()->now();
-    // predicted_msg.header.frame_id = "map";
-    // predicted_msg.point.x = predicted_state(0, 0); // x
-    // predicted_msg.point.y = predicted_state(0, 1); // y
-    // predicted_msg.point.z = 0.0;
-
-    // // 发布预测结果
-    // predicted_armor_publisher_->publish(predicted_msg); 
-
-    std::cout << "predicted.x: " << x << std::endl;
-    std::cout << "predicted.y: " << y << std::endl;
+    // 更新缓存的预测状态
+    latest_predicted_state_ = ekf_->getState();
+    has_predicted_state_ = true;
 }
 
 
     void ArmorTrackerNode::subFrameCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg){
+        if (!ekf_) {
+            RCLCPP_WARN(this->get_logger(), "EKF is not initialized yet.");
+            return;
+        }
+
         try
         {
             // 将 ROS 图像消息转换为 OpenCV 格式
             cv::Mat frame = cv_bridge::toCvShare(img_msg, "bgr8")->image;
 
-            // 获取预测状态
-            Eigen::Matrix<double, 1, 4> predicted_state = ekf_->getState();
+            if(has_predicted_state_){
 
-            cv::Point predicted_point(
-                static_cast<int>(predicted_state(0)), // x 对应列
-                static_cast<int>(predicted_state(1))  // y 对应行
-            );
+                // 获取预测状态（归一化相机坐标）
+                Eigen::Vector4d predicted_state = ekf_->getState();
 
-            cv::circle(frame, predicted_point, 5, cv::Scalar(0, 255, 0), -1); // 绿色圆点
+                // 获取预测状态 [x, y]，但需要知道 z
+                double x = predicted_state(0);
+                double y = predicted_state(1);
+                double z = 2.0;  // 假设目标物体在相机前方 1 米（如果有深度数据可用则替换）
+
+                // 投影到像素坐标系
+                int img_x = static_cast<int>((x / z) * fx + cx);
+                int img_y = static_cast<int>((y / z) * fy + cy);
+
+                // 边界检查，防止越界
+                if (img_x < 0 || img_x >= frame.cols || img_y < 0 || img_y >= frame.rows) {
+                    RCLCPP_WARN(this->get_logger(), "Predicted point out of image bounds: (%d, %d)", img_x, img_y);
+                    return;
+                }
+
+                // 绘制预测点（绿色实心圆）
+                cv::circle(frame, cv::Point(img_x, img_y), 5, cv::Scalar(0, 255, 0), -1);
+
+                // // 绘制轨迹（历史点连线）
+                // static std::vector<cv::Point> trajectory;
+                // trajectory.push_back(cv::Point(img_x, img_y));
+                // if (trajectory.size() > 30) trajectory.erase(trajectory.begin()); // 保留最近30帧
+                // for (size_t i = 1; i < trajectory.size(); ++i) {
+                //     cv::line(frame, trajectory[i-1], trajectory[i], cv::Scalar(255, 255, 255), 2);
+                // }
+            }
 
             // 显示图像
-            cv::imshow("Predicted Image", frame);
+            cv::imshow("Predicted Position", frame);
             cv::waitKey(1);
-
-        }
-        catch (const cv_bridge::Exception &e)
-        {
+        } catch (const cv_bridge::Exception &e) {
             RCLCPP_ERROR(this->get_logger(), "cv_bridge exception: %s", e.what());
         }
     }
