@@ -5,7 +5,7 @@
 #include <eigen3/Eigen/Core>
 #include <iostream>
 #include <rclcpp/logging.hpp>
-#include "geometry_msgs/msg/point32.hpp"
+#include "geometry_msgs/msg/point.hpp"
 
 typedef geometry_msgs::msg::Point32 PointType; 
 const int S_NUM = 4; // 状态维度 [x, y, vx, vy]
@@ -66,6 +66,11 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
     this->declare_parameter("u_vel", 0.0);
     this->declare_parameter("v_vel", 0.0);
 
+    u_vel_ = this->get_parameter("u_vel").as_double();
+    v_vel_ = this->get_parameter("v_vel").as_double();
+
+    RCLCPP_INFO(this->get_logger(), "Initial u_vel: %f, v_vel: %f", u_vel_, v_vel_);
+
     // 参数回调监听
     m_param_callback_handle = this->add_on_set_parameters_callback(
         [this](const std::vector<rclcpp::Parameter> &params) {
@@ -124,17 +129,33 @@ ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) :
         // Eigen::Matrix<double, 4, 4> FJacobi = Eigen::Matrix<double, 4, 4>::Identity();
         // Eigen::Matrix<double, 2, 4> HJacobi = Eigen::Matrix<double, 2, 4>::Identity();
 
-        // 过程噪声协方差矩阵 Q
-        Eigen::Matrix<double, 4, 4> Q;
-        Q << 0.01, 0, 0.001, 0,
-        0, 0.01, 0, 0.001,
-        0.001, 0, 0.01, 0,
-        0, 0.001, 0, 0.01;
+        // // 过程噪声协方差矩阵 Q
+        // Eigen::Matrix<double, 4, 4> Q;
+        // Q << 0.01, 0, 0.001, 0,
+        // 0, 0.01, 0, 0.001,
+        // 0.001, 0, 0.01, 0,
+        // 0, 0.001, 0, 0.01;
 
-        // 观测噪声协方差矩阵 R
-        Eigen::Matrix<double, 2, 2> R;
-        R << 0.5, 0,
-            0, 0.5;
+        // // 观测噪声协方差矩阵 R
+        // Eigen::Matrix<double, 2, 2> R;
+        // R << 0.5, 0,
+        //     0, 0.5;
+
+
+        // 读取 Q 矩阵参数
+        auto q_params = this->get_parameter("Q").as_double_array();
+        Eigen::Matrix<double, S_NUM, S_NUM> Q;
+        Q << q_params[0], q_params[1], q_params[2], q_params[3],
+            q_params[4], q_params[5], q_params[6], q_params[7],
+            q_params[8], q_params[9], q_params[10], q_params[11],
+            q_params[12], q_params[13], q_params[14], q_params[15];
+
+        // 读取 R 矩阵参数
+        auto r_params = this->get_parameter("R").as_double_array();
+        Eigen::Matrix<double, M_NUM, M_NUM> R;
+        R << r_params[0], r_params[1],
+            r_params[2], r_params[3];
+
 
         // 初始误差协方差矩阵 P
         Eigen::Matrix<double, 4, 4> P = Eigen::Matrix<double, 4, 4>::Identity();
@@ -234,7 +255,7 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
                 // 获取预测状态 [x, y]，但需要知道 z
                 double x = predicted_state(0);
                 double y = predicted_state(1);
-                double z = 2.0;  // 假设目标物体在相机前方 1 米（如果有深度数据可用则替换）
+                double z = 1.0;  
 
                 // 投影到像素坐标系
                 int img_x = static_cast<int>((x / z) * fx + cx);

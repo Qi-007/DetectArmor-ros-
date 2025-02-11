@@ -24,8 +24,9 @@ endif()
 
 install(
   DIRECTORY config
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}  
 )
+
 
 install(
   DIRECTORY launch
