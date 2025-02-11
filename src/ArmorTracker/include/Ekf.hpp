@@ -3,8 +3,11 @@
 
 #include <eigen3/Eigen/Core>
 #include <iostream>
+#include <rclcpp/logger.hpp>
+#include <rclcpp/logging.hpp>
 
-template<typename T = double, int S_NUM = 4, int M_NUM = 2>
+// S_NUM 状态维度    M_NUM 观测维度
+template<typename T = double, int S_NUM = 6, int M_NUM = 2>
 class Ekf {
 public:
     // typedef Eigen::Matrix<double, S_NUM, S_NUM> F;
@@ -47,7 +50,10 @@ public:
         m_state = init_state;
     }
 
-    void predict() {
+    void predict(T dt) {
+        updateF(dt);
+        updateQ(dt);
+
         // 1.
         m_pre_state = m_f * m_state;
 
@@ -56,6 +62,11 @@ public:
     }
 
     void update(Measurement measurement) {
+        if (!std::isfinite(measurement(0)) || !std::isfinite(measurement(1))) {
+            std::cout << "Measurement contains NaN or Inf!" << std::endl;
+            return;
+        }
+
         // 3.
         // m_k =  m_pre_p * m_h.transpose() * ((m_h * m_pre_p * m_h.transpose() + m_r).inverse());
         Eigen::Matrix<double, M_NUM, M_NUM> S = m_h * m_pre_p * m_h.transpose() + m_r; // 固定大小矩阵
@@ -70,10 +81,11 @@ public:
     }
 
     void setF(const Eigen::Matrix<double, S_NUM, S_NUM> &new_F) {
+        // std::cout << "Updated F matrix:\n" << new_F << std::endl;
         m_f = new_F;
     }
 
-    State getPreState() {return m_pre_state;}
+    // State getPreState() {return m_pre_state;}
     State getState() {return m_state;}
     P getP() {return m_p;}
     virtual ~Ekf() {
@@ -94,7 +106,24 @@ private:
     K m_k;
     Measurement m_measurement;
 
-};
+    void updateF(T dt) {
+        m_f << 1, 0, dt, 0, 0.5 * dt * dt, 0,
+               0, 1, 0, dt, 0, 0.5 * dt * dt,
+               0, 0, 1, 0, dt, 0,
+               0, 0, 0, 1, 0, dt,
+               0, 0, 0, 0, 1, 0,
+               0, 0, 0, 0, 0, 1;
+    }
 
+    void updateQ(T dt) {
+        T q = 1e-2;  // 过程噪声因子
+        m_q << q * pow(dt, 4) / 4, 0.0, q * pow(dt, 3) / 2, 0.0, q * pow(dt, 2) / 2, 0.0,
+               0.0, q * pow(dt, 4) / 4, 0.0, q * pow(dt, 3) / 2, 0.0, q * pow(dt, 2) / 2,
+               q * pow(dt, 3) / 2, 0.0, q * pow(dt, 2), 0.0, q * dt, 0.0,
+               0.0, q * pow(dt, 3) / 2, 0.0, q * pow(dt, 2), 0.0, q * dt,
+               q * pow(dt, 2) / 2, 0.0, q * dt, 0.0, q, 0.0,
+               0.0, q * pow(dt, 2) / 2, 0.0, q * dt, 0.0, q;
+    }
+};
 
 #endif

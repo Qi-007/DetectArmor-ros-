@@ -119,6 +119,7 @@ ArmorDetectNode::ArmorDetectNode(const rclcpp::NodeOptions &options) :
 
             armor_interfaces::msg::Armors armors_msg;
 
+            armors_msg.header.stamp = img_msg->header.stamp;
             armors_msg.armors.push_back(armor_msg);
 
             // 发布消息
