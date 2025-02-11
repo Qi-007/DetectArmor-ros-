@@ -1,22 +1,19 @@
 #ifndef ARMOR_TRACKER_NODE_H
 #define ARMOR_TRACKER_NODE_H
 
-#include <cstring>  
-#include <cmath>
-#include <rclcpp/subscription.hpp>
-#include <eigen3/Eigen/Core>
-#include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Dense>  
 
 #include <rclcpp/rclcpp.hpp>
-#include <image_transport/publisher.hpp>
-#include <image_transport/subscriber_filter.hpp>
-#include <image_transport/image_transport.hpp>
+#include <image_transport/image_transport.h> 
+
 #include <std_msgs/msg/float32.hpp>
 #include <sensor_msgs/msg/image.hpp>
 #include <opencv2/opencv.hpp>
+
 #include "Ekf.hpp"
 #include "armor_interfaces/msg/armor.hpp"
 #include "armor_interfaces/msg/armors.hpp"
+
 
 template class Ekf<double, 6, 2>;  // 显式实例化模板
 
@@ -27,7 +24,7 @@ public:
     }
     ArmorTrackerNode(const rclcpp::NodeOptions &options);
     void subArmorsCallback(const armor_interfaces::msg::Armors::SharedPtr armors_msg);
-
+ 
     void subFrameCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
     
 private:
@@ -48,6 +45,9 @@ private:
     double u_a_ = 0.0;
     double v_a_ = 0.0;
     rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr m_param_callback_handle;
+
+    Eigen::Matrix<double, 6, 1> predicted_state;
+    Eigen::Matrix<double, 6, 1> update_state;
 
 };
 

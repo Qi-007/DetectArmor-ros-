@@ -1,14 +1,16 @@
 #include "ArmorTrackerNode.h"
 #include "Ekf.hpp"
 #include "cv_bridge/cv_bridge.h"
-#include <armor_interfaces/msg/detail/armor__struct.hpp>
-#include <Eigen/Dense>
-#include <eigen3/Eigen/Core>
+
+#include <armor_interfaces/msg/armor.hpp>  // 使用稳定的 ROS2 头文件
+#include <Eigen/Dense>  // 只保留这个，去掉冗余 Eigen 头文件
+
 #include <iostream>
-#include <rclcpp/logging.hpp>
-#include <rclcpp/utilities.hpp>
+#include <rclcpp/rclcpp.hpp>  // 这个已经包含 logging 和 utilities
 #include <vector>
 #include "geometry_msgs/msg/point.hpp"
+
+
 
 typedef geometry_msgs::msg::Point32 PointType; 
 const int S_NUM = 6; // 状态维度 [x, y, vx, vy, ax, ay]
@@ -66,6 +68,7 @@ void printApexs(const std::vector<PointType>& apexs){
 ArmorTrackerNode::ArmorTrackerNode(const rclcpp::NodeOptions &options) : 
     Node("armor_tracker", options)
 {
+    this->declare_parameter("dt", 0.02);
     this->declare_parameter("u_vel", 0.1);
     this->declare_parameter("v_vel", 0.1);
     this->declare_parameter("u_a", 0.1);
@@ -196,7 +199,7 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
 
         init_state << u, v, u_vel_, v_vel_, u_a_, v_a_;
         
-        // 初始化状态（修正原硬编码错误）
+        // 初始化状态
         ekf_->initState(init_state);       
 
         // 记录首次时间戳
@@ -205,10 +208,12 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
         return; // 不进行预测/更新，直接退出
     } 
 
-    rclcpp::Time current_time = armors_msg->header.stamp; 
-    double dt = (current_time - last_time_).seconds();
-    // RCLCPP_INFO(this->get_logger(), "Time interval dt: %f", dt);
-    last_time_ = current_time;
+    // rclcpp::Time current_time = armors_msg->header.stamp; 
+    // double dt = (current_time - last_time_).seconds();
+    // // RCLCPP_INFO(this->get_logger(), "Time interval dt: %f", dt);
+    // last_time_ = current_time;
+
+    double dt = this->get_parameter("dt").as_double();
 
     if (dt < 0.01) {  
         dt = 0.01;
@@ -223,10 +228,13 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
          0, 0, 0, 0, 1, 0,
          0, 0, 0, 0, 0, 1;
         
-    // ekf_->setF(F); // 确保 Ekf 类支持动态更新 F
-
     ekf_->predict(dt);
+    // 此时的 m_pre_state 是先验值（预测出的值）
+    predicted_state = ekf_->getPreState();
+
     ekf_->update(measurement);
+    // 此时的 m_state 是后验值（结合了m_pre_state）
+    update_state = ekf_->getState();
 
     // 更新缓存的预测状态
     latest_predicted_state_ = ekf_->getState();
@@ -245,21 +253,27 @@ void ArmorTrackerNode::subArmorsCallback(const armor_interfaces::msg::Armors::Sh
             cv::Mat frame = cv_bridge::toCvShare(img_msg, "bgr8")->image;
 
             if(has_predicted_state_){
-                // Eigen::Vector4d predicted_state = ekf_->getState();
-                Eigen::Matrix<double, S_NUM, 1> predicted_state = ekf_->getState();
-
-                double x = predicted_state(0);
-                double y = predicted_state(1);
+                double up_x = update_state(0);
+                double up_y = update_state(1);
+                double pre_x = predicted_state(0);
+                double pre_y = predicted_state(1);
                 // double z = 1.0;  
 
                 // 投影到像素坐标系
-                int img_x = static_cast<int>(x * fx + cx);
-                int img_y = static_cast<int>(y * fy + cy);
+                int img_up_x = static_cast<int>(up_x * fx + cx);
+                int img_up_y = static_cast<int>(up_y * fy + cy);
+                int img_pre_x = static_cast<int>(pre_x * fx + cx);
+                int img_pre_y = static_cast<int>(pre_y * fy + cy);
 
-                if (img_x >= 0 && img_x < frame.cols && img_y >= 0 && img_y < frame.rows) {
-                    cv::circle(frame, cv::Point(img_x, img_y), 5, cv::Scalar(0, 255, 0), -1);
+                if (img_up_x >= 0 && img_up_x < frame.cols && img_up_y >= 0 && img_up_y < frame.rows
+                    &&img_pre_x >= 0 && img_pre_x < frame.cols && img_pre_y >= 0 && img_pre_y < frame.rows) {
+                    // 后验点（绿色）
+                    cv::circle(frame, cv::Point(img_up_x, img_up_y), 5, cv::Scalar(0, 255, 0), -1);
+                    // 先验点（白色）
+                    cv::circle(frame, cv::Point(img_pre_x, img_pre_y), 5, cv::Scalar(255, 255, 255), -1);
                 } else {
-                    RCLCPP_WARN(this->get_logger(), "Predicted point out of image bounds: (%d, %d)", img_x, img_y);
+                    RCLCPP_WARN(this->get_logger(), "Predicted point out of image bounds: (%d, %d)", img_up_x, img_up_y);
+                    RCLCPP_WARN(this->get_logger(), "Predicted point out of image bounds: (%d, %d)", img_pre_x, img_pre_y);
                 }
 
             }

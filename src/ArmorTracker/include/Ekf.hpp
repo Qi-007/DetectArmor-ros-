@@ -53,7 +53,7 @@ public:
     void predict(T dt) {
         updateF(dt);
         updateQ(dt);
-
+        
         // 1.
         m_pre_state = m_f * m_state;
 
@@ -85,7 +85,7 @@ public:
         m_f = new_F;
     }
 
-    // State getPreState() {return m_pre_state;}
+    State getPreState() {return m_pre_state;}
     State getState() {return m_state;}
     P getP() {return m_p;}
     virtual ~Ekf() {
